@@ -7,7 +7,7 @@ from sklearn.ensemble import GradientBoostingClassifier
 from sklearn.metrics import precision_recall_curve
 from sklearn.utils import resample
 
-from model_utils import MODEL_PATH
+from src.model_utils import MODEL_PATH
 
 def train_and_save():
     try:

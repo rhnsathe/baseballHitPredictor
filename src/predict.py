@@ -1,4 +1,4 @@
-from model_utils import load_model_utils, predict_matchup
+from src.model_utils import load_model_utils, predict_matchup
 
 gbc, batter_stats, pitcher_stats, feature_cols, best_thresh = load_model_utils()
 

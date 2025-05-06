@@ -8,7 +8,7 @@ from sklearn.metrics import (
     roc_auc_score,
     classification_report
 )
-from model_utils import load_model_utils
+from src.model_utils import load_model_utils
 
 def evaluate():
     # 1) Load trained artifacts

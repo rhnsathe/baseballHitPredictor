@@ -9,7 +9,7 @@ from sklearn.ensemble import GradientBoostingClassifier
 from sklearn.metrics import precision_recall_curve
 from sklearn.calibration import CalibratedClassifierCV
 
-from model_utils import MODEL_PATH
+from src.model_utils import MODEL_PATH
 
 def train_and_save():
     if os.path.exists(MODEL_PATH):
