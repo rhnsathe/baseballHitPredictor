@@ -193,7 +193,6 @@ def train_and_save():
     best_thresh = th[np.argmax(2*prec*rec/(prec+rec+1e-10))]
     best_thresh = .50
 
-    # 9) Save everything
     joblib.dump(
         (gbc,
          batter_stats,

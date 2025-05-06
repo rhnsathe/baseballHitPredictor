@@ -11,7 +11,6 @@ from sklearn.metrics import (
 from src.model_utils import load_model_utils
 
 def evaluate():
-    # 1) Load trained artifacts
     (gbc,
      batter_stats,
      pitcher_stats,
@@ -20,7 +19,6 @@ def evaluate():
      bat_season_map,
      pit_season_map) = load_model_utils()
 
-    # 2) Reload & label Statcast data
     df = pd.read_csv("hello.csv")
     df = df.dropna(subset=["events"])
     df["label"] = df["events"].isin(
@@ -64,7 +62,6 @@ def evaluate():
     feats = [f for f in feats if f is not None]
     data  = pd.DataFrame(feats).fillna(0)
 
-    # 4) Predict & evaluate
     X       = data[feature_cols].values
     y       = df["label"].values
     y_proba = gbc.predict_proba(X)[:,1]
