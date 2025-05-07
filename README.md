@@ -8,7 +8,7 @@ A Python project that builds a lightweight “pre‑at‑bat” probability esti
 
 - **In‑place feature engineering**  
   – Zone-by-zone hit counts, distributions, and aggregated metrics for batters & pitchers  
-  – Per‑player seasonal statistics from CSV files  
+  – Per‑player seasonal statistics from CSV files taken from baseballsavant.com and utilizing pybaseball.
 - **Balanced training**  
   – Upsamples minority (“hit”) class for a balanced training set  
 - **Probability outputs**  
