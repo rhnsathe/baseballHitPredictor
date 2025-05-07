@@ -7,7 +7,7 @@ from sklearn.ensemble import GradientBoostingClassifier
 from sklearn.metrics import precision_recall_curve
 from sklearn.utils import resample
 
-from src.model_utils import MODEL_PATH
+from model_utils import MODEL_PATH
 
 def train_and_save():
     try:
@@ -191,7 +191,7 @@ def train_and_save():
     y_va_proba = gbc.predict_proba(X_va)[:,1]
     prec, rec, th = precision_recall_curve(y_va, y_va_proba)
     best_thresh = th[np.argmax(2*prec*rec/(prec+rec+1e-10))]
-    best_thresh = .50
+    best_thresh = .525
 
     joblib.dump(
         (gbc,
